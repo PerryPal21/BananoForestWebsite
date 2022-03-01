@@ -39,26 +39,9 @@ if (seo.url === "glitch-default") {
 fastify.get("/", function(request, reply) {
   
   // params is an object we'll pass to our handlebars template
-  let params = { seo: seo };
-  
-  // If someone clicked the option for a random color it'll be passed in the querystring
-  if (request.query.randomize) {
-    
-    // We need to load our color data file, pick one at random, and add it to the params
-    const colors = require("./src/colors.json");
-    const allColors = Object.keys(colors);
-    let currentColor = allColors[(allColors.length * Math.random()) << 0];
-    
-    // Add the color properties to the params object
-    params = {
-      color: colors[currentColor],
-      colorError: null,
-      seo: seo
-    };
-  }
-  
+ params = {}
   // The Handlebars code will be able to access the parameter values and build them into the page
-  reply.view("/src/pages/index.hbs", params);
+  reply.view("/src/views/index.hbs", params);
 });
 
 /**

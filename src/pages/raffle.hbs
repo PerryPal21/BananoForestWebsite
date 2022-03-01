@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/PerryPal21/perry.css@master/perry.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <title>Banano Forest: Raffle</title>
+  </head>
+
+  <body>
+    <div id="particles-js"></div>
+    <div class="container">
+      <script>
+        particlesJS("particles-js", {
+          particles: {
+            number: { value: 40, density: { enable: true, value_area: 800 } },
+            color: { value: "#ffffff" },
+            shape: {
+              type: "circle",
+              stroke: { width: 0, color: "#000000" },
+              polygon: { nb_sides: 5 },
+              image: { src: "img/github.svg", width: 100, height: 100 },
+            },
+            opacity: {
+              value: 0.1,
+              random: false,
+              anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+            },
+            size: {
+              value: 3,
+              random: true,
+              anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+            },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#ffffff",
+              opacity: 0.4,
+              width: 1,
+            },
+            move: {
+              enable: true,
+              speed: 6,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+              attract: { enable: false, rotateX: 600, rotateY: 1200 },
+            },
+          },
+          interactivity: {
+            detect_on: "window",
+            events: {
+              onhover: { enable: true, mode: "grab" },
+              onclick: { enable: false, mode: "push" },
+              resize: true,
+            },
+            modes: {
+              grab: { distance: 200, line_linked: { opacity: 1 } },
+              bubble: {
+                distance: 400,
+                size: 40,
+                duration: 2,
+                opacity: 8,
+                speed: 3,
+              },
+              repulse: { distance: 200, duration: 0.4 },
+              push: { particles_nb: 4 },
+              remove: { particles_nb: 2 },
+            },
+          },
+          retina_detect: true,
+        });
+      </script>
+      <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a {
+          color: black;
+        }
+
+        a:hover {
+          color: green;
+        }
+
+        hr {
+          border-color: #4cbf4b;
+        }
+
+        .container {
+          position: absolute;
+          margin: auto;
+          color: black;
+          max-width: 300rem;
+          background-color: white;
+          margin-left: auto;
+          margin-right: auto;
+          left: 0;
+          right: 0;
+        }
+
+        .center {
+          text-align: center;
+        }
+
+        .nodec {
+          text-decoration: none;
+          color: white;
+        }
+
+        .forestpic {
+          width: 100%;
+          border-radius: 20px;
+        }
+
+        canvas {
+          display: block;
+          vertical-align: bottom;
+        } /* ---- particles.js container ---- */
+        #particles-js {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: #4cbe4b;
+          background-image: url("");
+          background-repeat: no-repeat;
+          background-size: 20%;
+          background-position: 50% 50%;
+        }
+
+        #particles-js canvas {
+          display: block;
+          vertical-align: bottom;
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          opacity: 1;
+          -webkit-transition: opacity 0.8s ease, -webkit-transform 1.4s ease;
+          transition: opacity 0.8s ease, transform 1.4s ease;
+        }
+
+        #particles-js {
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          z-index: -10;
+          top: 0;
+          left: 0;
+        }
+
+        .pgp > p {
+          display: inline;
+        }
+
+        .icon {
+          width: 50px;
+          display: inline;
+          background-color: #202b38;
+        }
+
+        .winners {
+          padding: 10px;
+          background-color: #fbdd11;
+          border-radius: 10px;
+          margin-bottom: 15px;
+          border-width: 2px;
+          border-style: solid;
+          border-color: #4cbf4b;
+        }
+        
+        
+@media only screen and (min-width: 1000px) {
+        
+        .project {
+          padding: 10px;
+          background-color: #fbdd11;
+          border-radius: 10px;
+          margin-bottom: 15px;
+          border-width: 2px;
+          border-style: solid;
+          border-color: #4cbf4b;
+              width: 80%;
+    min-height: 300px;
+    margin: 0 auto;
+    display: -webkit-flex; /* Safari */     
+    display: flex; /* Standard syntax */
+        }
+
+        .box {
+          width: 30%;
+          background-color: #fbdd11;
+          text-align: center;
+              padding: 10px;
+    -webkit-flex: 1; /* Safari */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1; /* Standard syntax */
+        }
+        
+        .qr > img {
+          margin: auto;
+          width: 280px;
+          height: auto;
+          display: block;
+          border-radius: 5px;
+          border: 3px solid black;
+        }
+
+        .box > button {
+          margin: auto;
+          display: block;
+          width: 20rem;
+          background-color: #2a2a2e;
+          color: white;
+        }
+        
+        }      
+        
+
+        .hidden {
+          display: none;
+        }
+        
+        .orgimg {
+          width: 3em;
+          border-radius: 5px;
+          display: inline-block;
+        } 
+        
+        .project > h4 {
+          display: inline-block;
+        }
+        
+        
+@media only screen and (max-width: 1000px) {
+  
+          
+        .project {
+          padding: 10px;
+          background-color: #fbdd11;
+          border-radius: 10px;
+          margin-bottom: 15px;
+          border-width: 2px;
+          border-style: solid;
+          border-color: #4cbf4b;
+          
+        }
+
+        .box {
+          width: 100%;
+          background-color: #fbdd11;
+          text-align: center;
+              padding: 10px;
+  }
+          .qr > img {
+            margin: auto;
+          width: 280px;
+          height: auto;
+          border-radius: 5px;
+        }
+  
+        .box > button {
+          margin: auto;
+          width: 20rem;
+          background-color: #2a2a2e;
+          color: white;
+        }
+}
+
+          a:visited {
+  color: green;
+  }
+        
+        
+      </style>
+
+      <h1>Banano Forest: Raffle</h1>
+      <h5>The Banano Forest Initiative</h5>
+      <p>
+        <a href="/">Home</a> | <a href="https://chat.banano.cc/">Discord Server</a>
+      </p>
+      <br />
+      <div class="instructions">
+        <h4>How it works</h4>
+        <p>
+          Each wallet represents an organization. At the end of every week we share the final results with you all and declare a winner. If it's a tie or very close we'll declare two winners. Then we 
+          take all the addresses of the contributers and use those as raffle tickets to determine a winner of the grand prize, a percentage of all the donations made. Then we have to sell the accumulated ban
+          for Fiat currency to be able to actually donate. This is done via the community, (more on that later in development) as we believe bans should be freely distributed. Then the process repeats!
+        </p>
+        <br />
+      </div>
+      <br />
+      <div class="hidden">
+        <p id="a1">
+          ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry
+        </p>
+        <p id="a2">
+          ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry
+        </p>
+        <p id="a3">
+          ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry
+        </p>
+        <p id="a4">
+          ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry
+        </p>
+      </div>
+      <div class="project">
+        <div class="box">
+            <img src="https://cdn.freebiesupply.com/images/large/2x/steam-logo-transparent.png" class="orgimg" alt="orgpic" >
+      
+          <h5>
+            The Rainforest Alliance
+        </h5>
+        
+
+        <br>
+                <p>
+          We gave them out first #1 spot because of their protection and conversation of the banana ecosystem. As they concisely put it "The world loves bananas." <br>
+              Rainforest Alliance Link: https://www.rainforest-alliance.org/insights/rainforest-alliance-certified-bananas/
+        </p>
+          </div>
+                <div class="box">
+          <div class="qr">
+            <img
+              src="data:image/png;base64,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"
+              alt="image1"
+            />
+          </div>
+          <br />
+          <button onclick="copybanAdd('#a1')">Copy Address</button>
+        </div>
+        </div>
+      <br>
+      <div class="project">
+        <div class="box">
+            <img src="https://cdn.freebiesupply.com/images/large/2x/steam-logo-transparent.png" class="orgimg" alt="orgpic" >
+      
+          <h5>
+            The Amazon Conservation Team
+        </h5>
+        
+
+        <br>
+                <p>
+          A highly regarded charity with a focus on both ecological conservation and protection of the indigenous peoples of the Amazon Rainforest<br>
+                  Amazon Conservation Team Link: https://www.amazonteam.org/
+        </p>
+          </div>
+                <div class="box">
+          <div class="qr">
+            <img
+              src="data:image/png;base64,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"
+              alt="image1"
+            />
+          </div>
+          <br />
+          <button onclick="copybanAdd('#a1')">Copy Address</button>
+        </div>
+        </div>
+      <br>
+      <div class="project">
+        <div class="box">
+            <img src="https://cdn.freebiesupply.com/images/large/2x/steam-logo-transparent.png" class="orgimg" alt="orgpic" >
+      
+          <h5>
+            Cool Earth
+        </h5>
+        
+
+        <br>
+                <p>
+          A David Attenborough approved organization which helps fund infastructure for rainforest-based indigenous communities around the globe. <br>
+                  Cool Earth Link: https://www.coolearth.org/
+        </p>
+          </div>
+                <div class="box">
+          <div class="qr">
+            <img
+              src="data:image/png;base64,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"
+              alt="image1"
+            />
+          </div>
+          <br />
+          <button onclick="copybanAdd('#a1')">Copy Address</button>
+        </div>
+        </div>
+      <br>
+      <div class="project">
+        <div class="box">
+            <img src="https://cdn.freebiesupply.com/images/large/2x/steam-logo-transparent.png" class="orgimg" alt="orgpic" >
+      
+          <h5>
+            Rainforest Coalition
+        </h5>
+        
+
+        <br>
+                <p>
+          An intergovernmental organization which  aims to bring together both developing and industrialized nations for the purpose of creating community-driven, environmentally sustainable growth.
+<br>
+Rainforest Coalition Link : https://www.rainforestcoalition.org
+
+        </p>
+          </div>
+                <div class="box">
+          <div class="qr">
+            <img
+              src="data:image/png;base64,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"
+              alt="image1"
+            />
+          </div>
+          <br />
+          <button onclick="copybanAdd('#a1')">Copy Address</button>
+        </div>
+        </div>
+      <br>
+      
+      <br />
+      <script>
+        function copybanAdd(element) {
+          var $temp = $("<input>");
+          $("body").append($temp);
+          $temp.val($(element).text()).select();
+          document.execCommand("copy");
+          $temp.remove();
+          alert("Address Copied!");
+        }
+      </script>
+      <div class="math">
+        <h4>Raffle Division</h4>
+        <p>After every week, the total Raffle pool is divided accordingly:</p>
+        <ul>
+          <li>50% -> To be donated to the charity with the most votes</li>
+          <li>30% -> To be sent to the randomly selected donor</li>
+          <li>20% -> To be added to the Banano Forest faucet</li>
+        </ul>
+        <br />
+      </div>
+
+      <div class="Previous Donations">
+        <h4>Previous Winners</h4>
+        <div class="projectLarge">
+  <div class="winners">
+    <p>ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry</p>
+  </div>
+  <div class="winners">
+    <p>ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry</p>
+</div>
+  </div>
+        <br />
+      </div>
+      <hr />
+      <p>An initiative by thearistotle and PerryPal</p>
+    </div>
+  </body>
+</html>

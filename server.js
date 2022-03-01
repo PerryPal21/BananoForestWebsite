@@ -1,4 +1,5 @@
 const path = require("path");
+const fetch = require("node-fetch")
 
 const fastify = require("fastify")({
   logger: false
@@ -36,7 +37,14 @@ fastify.get("/faq", function(request, reply) {
 });
 
 fastify.get("/api", function(request, reply) {
+  address1 = ""
+  address2 = ""
+  address3 = ""
+  address4 = ""
   
+  const resAddress1 = await fetch('https://api.creeper.banano.cc/v2/accounts/' + address1);
+  const body = await resAddress1.json();
+  console.log(body)
 });
 
 

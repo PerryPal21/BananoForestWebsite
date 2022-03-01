@@ -158,14 +158,18 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
     display: inline-block;
   }
   
-  .mobileSpan {
+  .mobileFooter {
     display: none;
   }
   
           
 @media only screen and (max-width: 1000px) {
   
-  .secondLogo {
+  .mobileFooter {
+    display: block;
+  }
+  
+  .desktopFooter {
     display: none;
   }
   
@@ -239,11 +243,19 @@ Much will change as we begin this project, but ideally we would like to show eve
   </div>
 
 <hr>
-<p>
+<p class="mobileFooter">
+      <img src="https://cdn.glitch.global/d79718ab-d262-4738-8bb7-2e6901f4f041/banano-icon.png?v=1646162540776" alt="bananoLogo"></img>
+    <span class="text">An initiative by</span>
+      <img src="https://cdn.glitch.global/d79718ab-d262-4738-8bb7-2e6901f4f041/banano-icon.png?v=1646162540776" alt="bananoLogo"></img>
+  <br>  
+  <span class="text">thearistotle and PerryPal</span>
+  
+</p>
+
+<p class="desktopFooter">
       <img src="https://cdn.glitch.global/d79718ab-d262-4738-8bb7-2e6901f4f041/banano-icon.png?v=1646162540776" alt="bananoLogo"></img>
     <span class="text">An initiative by thearistotle and PerryPal</span>
-      <img src="https://cdn.glitch.global/d79718ab-d262-4738-8bb7-2e6901f4f041/banano-icon.png?v=1646162540776" class="secondLogo" alt="bananoLogo"></img>
-  
+      <img src="https://cdn.glitch.global/d79718ab-d262-4738-8bb7-2e6901f4f041/banano-icon.png?v=1646162540776" alt="bananoLogo"></img>
 </p>
 </div>
 </body>

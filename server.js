@@ -1,6 +1,8 @@
 const path = require("path");
 const fetch = require("node-fetch")
 const bjs = require("@bananocoin/bananojs")
+const math = require("mathjs")
+
 
 const fastify = require("fastify")({
   logger: false
@@ -22,8 +24,14 @@ fastify.register(require("point-of-view"), {
 });
 
 
-fastify.get("/", function(request, reply) {
-  var params = {}
+fastify.get("/", async function(request, reply) {
+  const addressAPI = await fetch("https://bananoforest.glitch.me/api")
+  const body = await addressAPI.json();
+  
+  var params = { add1: body.add1, 
+                add2:  body.add2, 
+                add3:  body.add3, 
+                add4:  body.add4}
   reply.view("/src/pages/index.hbs", params);
 });
 
@@ -38,10 +46,10 @@ fastify.get("/faq", function(request, reply) {
 });
 
 fastify.get("/api", async function(request, reply) {
-  address1 = "ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry"
-  address2 = "ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry"
-  address3 = "ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry"
-  address4 = "ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry"
+  const address1 = "ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry"
+  const address2 = "ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry"
+  const address3 = "ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry"
+  const address4 = "ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry"
   
   const resAddress1 = await fetch('https://api.creeper.banano.cc/v2/accounts/' + address1);
   const body1 = await resAddress1.json();
@@ -55,7 +63,10 @@ fastify.get("/api", async function(request, reply) {
   const resAddress4 = await fetch('https://api.creeper.banano.cc/v2/accounts/' + address4);
   const body4 = await resAddress4.json();
   
-    reply.send({ add1: body1.account.balance , add2: body2.account.balance, add3: body3.account.balance, add4: body4.account.balance })
+    reply.send({ add1: math.evaluate(body1.account.balance**-29) , 
+                add2: body2.account.balance, 
+                add3: body3.account.balance, 
+                add4: body4.account.balance })
 });
 
 

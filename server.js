@@ -36,7 +36,7 @@ fastify.get("/faq", function(request, reply) {
   reply.view("/src/pages/faq.hbs", params);
 });
 
-fastify.get("/api", function(request, reply) {
+fastify.get("/api", async function(request, reply) {
   address1 = ""
   address2 = ""
   address3 = ""

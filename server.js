@@ -37,10 +37,10 @@ fastify.get("/faq", function(request, reply) {
 });
 
 fastify.get("/api", async function(request, reply) {
-  address1 = ""
-  address2 = ""
-  address3 = ""
-  address4 = ""
+  address1 = "ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry"
+  address2 = "ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry"
+  address3 = "ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry"
+  address4 = "ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry"
   
   const resAddress1 = await fetch('https://api.creeper.banano.cc/v2/accounts/' + address1);
   const body = await resAddress1.json();

@@ -34,13 +34,40 @@ particlesJS("particles-js", {"particles":{"number":{"value":40,"density":{"enabl
         ]);
 
         var options = {
-          title: 'My Daily Activities'
+          title: 'The Donation Pool Division'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
         chart.draw(data, options);
       }
+      
+      if ($(window).width() < 1000) {
+         google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Organization', 'Banano Amount'],
+          ['Org1',     {{add1}}],
+          ['Org2',      {{add2}}],
+          ['Org3',  {{add3}}],
+          ['Org4', {{add4}}],
+        ]);
+
+        var options = {
+          title: 'The Donation Pool Division',
+          legend: {legend: {position: 'none'}}
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+}
+      
+      
     </script>
 
 <style>

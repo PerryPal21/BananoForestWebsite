@@ -63,10 +63,10 @@ fastify.get("/api", async function(request, reply) {
   const resAddress4 = await fetch('https://api.creeper.banano.cc/v2/accounts/' + address4);
   const body4 = await resAddress4.json();
   
-    reply.send({ add1: math.evaluate(body1.account.balance**-29) , 
-                add2: body2.account.balance, 
-                add3: body3.account.balance, 
-                add4: body4.account.balance })
+    reply.send({ add1: math.evaluate(body1.account.balance*10**-29), 
+                add2: math.evaluate(body2.account.balance*10**-29), 
+                add3: math.evaluate(body3.account.balance*10**-29), 
+                add4: math.evaluate(body4.account.balance*10**-29)  })
 });
 
 

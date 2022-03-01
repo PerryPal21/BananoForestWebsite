@@ -1,6 +1,6 @@
 const path = require("path");
 const fetch = require("node-fetch")
-const
+const bjs = require("@bananocoin/bananojs")
 
 const fastify = require("fastify")({
   logger: false
@@ -45,7 +45,7 @@ fastify.get("/api", async function(request, reply) {
   
   const resAddress1 = await fetch('https://api.creeper.banano.cc/v2/accounts/' + address1);
   const body = await resAddress1.json();
-  console.log(body)
+  console.log(bjs.BananoUtil.getBananoPartsFromRaw(body.account.balance) )
 });
 
 

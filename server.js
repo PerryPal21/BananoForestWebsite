@@ -44,8 +44,18 @@ fastify.get("/api", async function(request, reply) {
   address4 = "ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry"
   
   const resAddress1 = await fetch('https://api.creeper.banano.cc/v2/accounts/' + address1);
-  const body = await resAddress1.json();
-  console.log(bjs.BananoUtil.getBananoPartsFromRaw(body.account.balance) )
+  const body1 = await resAddress1.json();
+  
+  const resAddress2 = await fetch('https://api.creeper.banano.cc/v2/accounts/' + address2);
+  const body2 = await resAddress2.json();
+  
+  const resAddress3 = await fetch('https://api.creeper.banano.cc/v2/accounts/' + address3);
+  const body3 = await resAddress3.json();
+  
+  const resAddress4 = await fetch('https://api.creeper.banano.cc/v2/accounts/' + address4);
+  const body4 = await resAddress4.json();
+  
+    reply.send({ add1: body1.account.balance , add2: body2.account.balance, add3: body3.account.balance, add4: body4.account.balance })
 });
 
 

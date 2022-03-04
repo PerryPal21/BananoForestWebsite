@@ -1,6 +1,5 @@
 const path = require("path");
 const fetch = require("node-fetch");
-const bjs = require("@bananocoin/bananojs");
 const math = require("mathjs");
 
 const fastify = require("fastify")({

@@ -1,7 +1,7 @@
 {
-  "name": "glitch-hello-node",
+  "name": "BananoForest",
   "version": "0.0.1",
-  "description": "A simple Node app built on fastify, instantly up and running. Built to be remixed on Glitch.com.",
+  "description": "A non-profit initiative to help the forests using Banano",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -20,7 +20,7 @@
     "node": "14.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/glitch-hello-node"
+    "url": "https://glitch.com/edit/#!/bananoforest"
   },
   "license": "MIT",
   "keywords": [

@@ -46,6 +46,20 @@ fastify.get("/", async function (request, reply) {
   reply.view("/src/pages/index.hbs", params);
 });
 
+fastify.get("/old", async function (request, reply) {
+  const addressAPI = await fetch("https://bananoforest.glitch.me/api");
+  const body = await addressAPI.json();
+
+  var params = {
+    add1: body.add1,
+    add2: body.add2,
+    add3: body.add3,
+    add4: body.add4,
+  };
+  reply.view("/src/pages/index2.hbs", params);
+});
+
+
 fastify.get("/raffle", function (request, reply) {
   var params = {
     addressOrg1: { address: address1, qr: qr1 },

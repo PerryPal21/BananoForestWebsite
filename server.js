@@ -20,7 +20,7 @@ fastify.register(require("point-of-view"), {
 });
 
 const address1 =
-  "ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry";
+  "ban_3greenxg9oxkaei556wrxwzwdxie4ehmzhmi7fyztofhantxjysntceq5sx5";
 const address2 =
   "ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry";
 const address3 =

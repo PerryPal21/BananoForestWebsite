@@ -46,7 +46,6 @@ fastify.get("/", async function (request, reply) {
   reply.view("/src/pages/index.hbs", params);
 });
 
-
 fastify.get("/raffle", function (request, reply) {
   var params = {
     addressOrg1: { address: address1, qr: qr1 },

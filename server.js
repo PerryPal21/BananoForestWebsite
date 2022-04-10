@@ -20,19 +20,18 @@ fastify.register(require("point-of-view"), {
   },
 });
 
-const address1 =
-  "ban_3greenxg9oxkaei556wrxwzwdxie4ehmzhmi7fyztofhantxjysntceq5sx5";
-const address2 =
-  "ban_3green9hp4hg8ejbpiq5fykktaz3scjoop9nzinq8m8kxu1xi6fi5ds3gwm8";
-const address3 =
-  "ban_3greengegg8of5dqjqfzqzkjkkygtaptn39uyja4xncd13eqftcpw4r4xmfb";
-const address4 =
-  "ban_3greenp7kzetigfjcfgbis1ad63m4hyyyit9usd1g4byuxg81g79fc8aiwtr";
+const address1 = "ban_3greenxg9oxkaei556wrxwzwdxie4ehmzhmi7fyztofhantxjysntceq5sx5";
 
-const qr1 = 
-const qr2 = 
-const qr3 = 
-const qr4 = 
+const address2 =
+"ban_3green9hp4hg8ejbpiq5fykktaz3scjoop9nzinq8m8kxu1xi6fi5ds3gwm8";
+const address3 = "ban_3greengegg8of5dqjqfzqzkjkkygtaptn39uyja4xncd13eqftcpw4r4xmfb";
+const address4 =
+"ban_3greenp7kzetigfjcfgbis1ad63m4hyyyit9usd1g4byuxg81g79fc8aiwtr";
+
+const qr1 = config.qr1
+const qr2 = config.qr2
+const qr3 = config.qr3
+const qr4 = config.qr4
 
 fastify.get("/", async function (request, reply) {
   const addressAPI = await fetch("https://bananoforest.glitch.me/api");

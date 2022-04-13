@@ -34,61 +34,61 @@ const qr3 = config.qr3
 const qr4 = config.qr4
 
 fastify.get("/", async function (request, reply) {
-  const addressAPI = await fetch("https://bananoforest.glitch.me/api");
-  const body = await addressAPI.json();
+//   const addressAPI = await fetch("https://bananoforest.glitch.me/api");
+//   const body = await addressAPI.json();
 
-  var params = {
-    add1: body.add1,
-    add2: body.add2,
-    add3: body.add3,
-    add4: body.add4,
-  };
-  reply.view("/src/pages/index.hbs", params);
+//   var params = {
+//     add1: body.add1,
+//     add2: body.add2,
+//     add3: body.add3,
+//     add4: body.add4,
+//   };
+  reply.view("/src/pages/redirect.hbs");
 });
 
-fastify.get("/raffle", function (request, reply) {
-  var params = {
-    addressOrg1: { address: address1, qr: qr1 },
-    addressOrg2: { address: address2, qr: qr2 },
-    addressOrg3: { address: address3, qr: qr3 },
-    addressOrg4: { address: address4, qr: qr4 },
-  };
-  reply.view("/src/pages/raffle.hbs", params);
-});
+// fastify.get("/raffle", function (request, reply) {
+//   var params = {
+//     addressOrg1: { address: address1, qr: qr1 },
+//     addressOrg2: { address: address2, qr: qr2 },
+//     addressOrg3: { address: address3, qr: qr3 },
+//     addressOrg4: { address: address4, qr: qr4 },
+//   };
+//   reply.view("/src/pages/raffle.hbs", params);
+// });
 
-fastify.get("/faq", function (request, reply) {
-  var params = {};
-  reply.view("/src/pages/faq.hbs", params);
-});
+// fastify.get("/faq", function (request, reply) {
+//   var params = {};
+//   reply.view("/src/pages/faq.hbs", params);
+// });
 
-fastify.get("/api", async function (request, reply) {
-  const resAddress1 = await fetch(
-    "https://api.creeper.banano.cc/v2/accounts/" + address1
-  );
-  const body1 = await resAddress1.json();
+// fastify.get("/api", async function (request, reply) {
+//   const resAddress1 = await fetch(
+//     "https://api.creeper.banano.cc/v2/accounts/" + address1
+//   );
+//   const body1 = await resAddress1.json();
 
-  const resAddress2 = await fetch(
-    "https://api.creeper.banano.cc/v2/accounts/" + address2
-  );
-  const body2 = await resAddress2.json();
+//   const resAddress2 = await fetch(
+//     "https://api.creeper.banano.cc/v2/accounts/" + address2
+//   );
+//   const body2 = await resAddress2.json();
 
-  const resAddress3 = await fetch(
-    "https://api.creeper.banano.cc/v2/accounts/" + address3
-  );
-  const body3 = await resAddress3.json();
+//   const resAddress3 = await fetch(
+//     "https://api.creeper.banano.cc/v2/accounts/" + address3
+//   );
+//   const body3 = await resAddress3.json();
 
-  const resAddress4 = await fetch(
-    "https://api.creeper.banano.cc/v2/accounts/" + address4
-  );
-  const body4 = await resAddress4.json();
+//   const resAddress4 = await fetch(
+//     "https://api.creeper.banano.cc/v2/accounts/" + address4
+//   );
+//   const body4 = await resAddress4.json();
 
-  reply.send({
-    add1: math.evaluate(body1.account.balance * 10 ** -29),
-    add2: math.evaluate(body2.account.balance * 10 ** -29),
-    add3: math.evaluate(body3.account.balance * 10 ** -29),
-    add4: math.evaluate(body4.account.balance * 10 ** -29),
-  });
-});
+//   reply.send({
+//     add1: math.evaluate(body1.account.balance * 10 ** -29),
+//     add2: math.evaluate(body2.account.balance * 10 ** -29),
+//     add3: math.evaluate(body3.account.balance * 10 ** -29),
+//     add4: math.evaluate(body4.account.balance * 10 ** -29),
+//   });
+// });
 
 fastify.listen(process.env.PORT, "0.0.0.0", function (err, address) {
   if (err) {

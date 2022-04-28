@@ -1,361 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/PerryPal21/perry.css@master/perry.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <link
-      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <title>Banano Forest: Raffle</title>
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <title>BananoForest: Raffle</title>
+        <link rel="stylesheet" href="raffle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+      </head>
 
   <body>
     <div id="particles-js"></div>
-    <div class="container">
-      <script>
-        particlesJS("particles-js", {
-          particles: {
-            number: { value: 40, density: { enable: true, value_area: 800 } },
-            color: { value: "#ffffff" },
-            shape: {
-              type: "circle",
-              stroke: { width: 0, color: "#000000" },
-              polygon: { nb_sides: 5 },
-              image: { src: "img/github.svg", width: 100, height: 100 },
-            },
-            opacity: {
-              value: 2,
-              random: false,
-              anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
-            },
-            size: {
-              value: 3,
-              random: true,
-              anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
-            },
-            line_linked: {
-              enable: true,
-              distance: 150,
-              color: "#ffffff",
-              opacity: 0.4,
-              width: 1,
-            },
-            move: {
-              enable: true,
-              speed: 6,
-              direction: "none",
-              random: false,
-              straight: false,
-              out_mode: "out",
-              bounce: false,
-              attract: { enable: false, rotateX: 600, rotateY: 1200 },
-            },
-          },
-          interactivity: {
-            detect_on: "window",
-            events: {
-              onhover: { enable: true, mode: "grab" },
-              onclick: { enable: false, mode: "push" },
-              resize: true,
-            },
-            modes: {
-              grab: { distance: 200, line_linked: { opacity: 1 } },
-              bubble: {
-                distance: 400,
-                size: 40,
-                duration: 2,
-                opacity: 8,
-                speed: 3,
+    <div class="container px-5">
+        <script>
+            particlesJS("particles-js", {
+              particles: {
+                number: { value: 40, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: {
+                  type: "circle",
+                  stroke: { width: 0, color: "#000000" },
+                  polygon: { nb_sides: 5 },
+                  image: { src: "img/github.svg", width: 100, height: 100 },
+                },
+                opacity: {
+                  value: 2,
+                  random: false,
+                  anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+                },
+                size: {
+                  value: 3,
+                  random: true,
+                  anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+                },
+                line_linked: {
+                  enable: true,
+                  distance: 150,
+                  color: "#ffffff",
+                  opacity: 0.4,
+                  width: 1,
+                },
+                move: {
+                  enable: true,
+                  speed: 6,
+                  direction: "none",
+                  random: false,
+                  straight: false,
+                  out_mode: "out",
+                  bounce: false,
+                  attract: { enable: false, rotateX: 600, rotateY: 1200 },
+                },
               },
-              repulse: { distance: 200, duration: 0.4 },
-              push: { particles_nb: 4 },
-              remove: { particles_nb: 2 },
-            },
-          },
-          retina_detect: true,
-        });
-      </script>
-      <style>
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        a {
-          color: black;
-        }
+              interactivity: {
+                detect_on: "window",
+                events: {
+                  onhover: { enable: true, mode: "grab" },
+                  onclick: { enable: false, mode: "push" },
+                  resize: true,
+                },
+                modes: {
+                  grab: { distance: 200, line_linked: { opacity: 1 } },
+                  bubble: {
+                    distance: 400,
+                    size: 40,
+                    duration: 2,
+                    opacity: 8,
+                    speed: 3,
+                  },
+                  repulse: { distance: 200, duration: 0.4 },
+                  push: { particles_nb: 4 },
+                  remove: { particles_nb: 2 },
+                },
+              },
+              retina_detect: true,
+            });
+          </script>
+    <style>
+        canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #4CBE4B; background-image: url(""); background-repeat: no-repeat; background-size: 20%; background-position: 50% 50%; }
+    
+    #particles-js canvas {
+        display: block;
+        vertical-align: bottom;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+        transition: opacity .8s ease, transform 1.4s ease
+    }
+    
+    #particles-js {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -10;
+        top: 0;
+        left: 0
+    }
+    </style>
 
-        a:hover {
-          color: green;
-        }
-
-        hr {
-          border-color: #4cbf4b;
-        }
-
-        .container {
-          position: absolute;
-          margin: auto;
-          color: black;
-          max-width: 300rem;
-          background-color: white;
-          margin-left: auto;
-          margin-right: auto;
-          left: 0;
-          right: 0;
-        }
-
-        .center {
-          text-align: center;
-        }
-
-        .nodec {
-          text-decoration: none;
-          color: white;
-        }
-
-        .forestpic {
-          width: 100%;
-          border-radius: 20px;
-        }
-
-        canvas {
-          display: block;
-          vertical-align: bottom;
-        } /* ---- particles.js container ---- */
-        #particles-js {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background-color: #4cbe4b;
-          background-image: url("");
-          background-repeat: no-repeat;
-          background-size: 20%;
-          background-position: 50% 50%;
-        }
-
-        #particles-js canvas {
-          display: block;
-          vertical-align: bottom;
-          -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-          transform: scale(1);
-          opacity: 1;
-          -webkit-transition: opacity 0.8s ease, -webkit-transform 1.4s ease;
-          transition: opacity 0.8s ease, transform 1.4s ease;
-        }
-
-        #particles-js {
-          width: 100%;
-          height: 100%;
-          position: fixed;
-          z-index: -10;
-          top: 0;
-          left: 0;
-        }
-
-        .pgp > p {
-          display: inline;
-        }
-
-        .icon {
-          width: 50px;
-          display: inline;
-          background-color: #202b38;
-        }
-
-        .winners {
-          padding: 10px;
-          background-color: #fbdd11;
-          border-radius: 10px;
-          margin-bottom: 15px;
-          border-width: 2px;
-          border-style: solid;
-          border-color: #4cbf4b;
-        }
-        
-        .winners > p {
-          word-wrap: break-word;
-        }
-        
-        
-@media only screen and (min-width: 1000px) {
-        
-        .project {
-          padding: 10px;
-          background-color: #fbdd11;
-          border-radius: 10px;
-          margin-bottom: 15px;
-          border-width: 2px;
-          border-style: solid;
-          border-color: #4cbf4b;
-              width: 80%;
-    min-height: 300px;
-    margin: 0 auto;
-    display: -webkit-flex; /* Safari */     
-    display: flex; /* Standard syntax */
-        }
-
-        .box {
-          width: 30%;
-          background-color: #fbdd11;
-          text-align: center;
-              padding: 10px;
-    -webkit-flex: 1; /* Safari */
-    -ms-flex: 1; /* IE 10 */
-    flex: 1; /* Standard syntax */
-        }
-        
-        .qr > img {
-          margin: auto;
-          width: 280px;
-          height: auto;
-          display: block;
-          border-radius: 5px;
-          border: 3px solid black;
-        }
-
-        .box > button {
-          margin: auto;
-          display: block;
-          width: 20rem;
-          background-color: #2a2a2e;
-          color: white;
-        }
-        
-        }      
-        
-
-        .hidden {
-          display: none;
-        }
-        
-        .orgimg {
-          width: 3em;
-          border-radius: 5px;
-          display: inline-block;
-        } 
-        
-        .project > h4 {
-          display: inline-block;
-        }
-        
-        
-@media only screen and (max-width: 1000px) {
-  
-          
-        .project {
-          padding: 10px;
-          background-color: #fbdd11;
-          border-radius: 10px;
-          margin-bottom: 15px;
-          border-width: 2px;
-          border-style: solid;
-          border-color: #4cbf4b;
-          
-        }
-
-        .box {
-          width: 100%;
-          background-color: #fbdd11;
-          text-align: center;
-              padding: 10px;
-  }
-          .qr > img {
-            margin: auto;
-          width: 280px;
-          height: auto;
-          border-radius: 5px;
-        }
-  
-        .box > button {
-          margin: auto;
-          width: 20rem;
-          background-color: #2a2a2e;
-          color: white;
-        }
-}
-
-          a:visited {
-  color: black;
-  }
-        
-        .learnLink {
-          background-color: #4CBF4B;
-          border: 3px solid black;
-          padding: 10px;
-          border-radius: 5px;
-        }
-        
-        
-                  .logo1 {
-    width: 35rem;
-  }
-        
-        center > h4 {
-          color: green
-        }
-        
-  center > a {
-    text-decoration: none;
-  }
-  
-                
-        .container {
-          text-align: center;
-        }
-        
-        .text {
-    display: inline-block;
-    line-height: 1.6;
-  }
-  
-  p > img {
-    width: 25px;
-    display: inline-block;
-  }
-        
-          .mobileFooter {
-    display: none;
-  }
-  
-          
-@media only screen and (max-width: 1000px) {
-  
-  .mobileFooter {
-    display: block;
-  }
-  
-  .desktopFooter {
-    display: none;
-  }
-  
-  }
-  
-      </style>
-<div class="pagetop" id="pagetop">
-        <center><img src="https://cdn.glitch.global/d79718ab-d262-4738-8bb7-2e6901f4f041/bananoForestLogo.png?v=1646370337752" class = "logo1" alt="logoish"></center>
-      
-      <center><h4>Raffle</h4></center>
+<div class="pagetop mx-auto text-center " id="pagetop">
+        <img src="https://cdn.glitch.global/d79718ab-d262-4738-8bb7-2e6901f4f041/bananoForestLogo.png?v=1646370337752" class = "logo1" alt="logoish">
       <br>
-      <p class="nav">
-       <center><a href="/">Home</a> | <a href="https://chat.banano.cc/">Discord Server</a> | <a href="/faq">FAQ</a>  </center>
-      </p>
+      <br>
+      <h4>Raffle</h4>
+      <br>
+      <div class="linkNav text-center">
+        <a href="/" class="mx-3">Mission</a><a href="/faq"class="mx-3">FAQ</a><a href="https://https://discord.com/invite/tDGwJw3DVg/" class="mx-3">Discord</a>
+    </div>
       <br />
+    </div>
+    
       <div class="instructions">
-        <center><h4>How it works</h4></center>
+        <h4>How it works</h4>
         
-      <center> <p>
-          Each wallet represents an organization. Each and every donation gets you a raffle ticket (nothing else is needed). Once a week, the charity that has the most money recieved is the winner. All of the 
+       <p>
+        Each wallet represents an organization. Each and every donation gets you a raffle ticket (nothing else is needed). Once a week, the charity that has the most money recieved is the winner. All of the 
         funds from these donation wallets are moved to a central wallet. </p> <p> %20 of the ban in this central wallet goes towards the <a href="https://bananoforest-faucet.glitch.me/">faucet</a>, %10 is used as the raffle ticket grand prize, and the remaining %70 is auctioned to all
         of you in exchange for FIAT (USD) which we then donate %100 of to the winning charity of that week.</p>
         
@@ -366,9 +134,9 @@
         Then the process repeats!<br><br> <br><strong>If you are new to cryptocurrency or Banano, here's how to donate: </strong> <br> You can donate by either scanning one of the QR codes while sending money using the Kalium wallet 
         or clicking "copy address" and pasting it into the address field in either Bananovault or Kalium<br><br>
          
-        <strong>Remember, you can send any amount to recieve a raffle ticket, 1 raffle ticket per donation. Total amount donated determines odds of winning.</strong>
+        <strong>Remember, you can send any amount to recieve a raffle ticket, the more you donate, the higher chance you have to win!</strong>
         <hr> For more information, visit the FAQ page
-        </p></center> 
+        </p> 
         <br />
       </div>
       <br />
@@ -391,18 +159,19 @@
         <br>
                 <p>
           We gave them out first #1 spot because of their protection and conversation of the banana ecosystem. As they concisely put it, "The world loves bananas." <br>
-              <br><a class="learnLink" href="https://www.rainforest-alliance.org/insights/rainforest-alliance-certified-bananas/">Learn more</a>
+              <br><a class="bg-success text-white btn" href="https://www.rainforest-alliance.org/insights/rainforest-alliance-certified-bananas/">Learn more</a>
         </p>
           </div>
                 <div class="box">
           <div class="qr">
             <img
               src="{{addressOrg1.qr}}"
+              class="w-50"
               alt="image1"
             />
           </div>
           <br />
-          <button onclick="copybanAdd('#a1')">Copy Address</button>
+          <button onclick="copybanAdd('#a1')" class="btn btn-dark">Copy Address</button>
         </div>
         </div>
       <br>
@@ -419,18 +188,19 @@
         <br>
                 <p>
           A highly regarded charity with a focus on both ecological conservation and protection of the indigenous peoples of the Amazon Rainforest.<br>
-              <br><a class="learnLink" href="https://www.amazonteam.org/">Learn more</a>
+              <br><a class="bg-success text-white btn" href="https://www.amazonteam.org/">Learn more</a>
         </p>
           </div>
                 <div class="box">
           <div class="qr">
             <img
               src="{{addressOrg2.qr}}"
+              class="w-50"
               alt="image1"
             />
           </div>
           <br />
-          <button onclick="copybanAdd('#a2')">Copy Address</button>
+          <button onclick="copybanAdd('#a2')" class="btn btn-dark">Copy Address</button>
         </div>
         </div>
       <div class="c3" id="c3">
@@ -447,19 +217,19 @@
         <br>
                 <p>
           A David Attenborough approved organization which helps fund infastructure for rainforest-based indigenous communities around the globe. <br>
-              <br><a class="learnLink" href="https://www.coolearth.org/">Learn more</a>
+              <br><a class="bg-success text-white btn" href="https://www.coolearth.org/">Learn more</a>
         </p>
           </div>
                 <div class="box">
           <div class="qr">
             <img
               src="{{addressOrg3.qr}}"
-                 
+              class="w-50"
               alt="image1"
             />
           </div>
           <br />
-          <button onclick="copybanAdd('#a3')">Copy Address</button>
+          <button onclick="copybanAdd('#a3')" class="btn btn-dark">Copy Address</button>
         </div>
         </div>
        <div class="c4" id="c4"> </div>
@@ -477,19 +247,20 @@
                 <p>
           An intergovernmental organization which  aims to bring together both developing and industrialized nations for the purpose of creating community-driven, environmentally sustainable growth.
 <br>
-              <br><a class="learnLink" href="https://www.rainforestcoalition.org">Learn more</a>
+              <br><a class="bg-success text-white btn" href="https://www.rainforestcoalition.org">Learn more</a>
         </p>
           </div>
                 <div class="box">
           <div class="qr">
             <img
               src="{{addressOrg4.qr}}"
+              class="w-50"
               
               alt="image1"
             />
           </div>
           <br />
-          <button onclick="copybanAdd('#a4')">Copy Address</button>
+          <button onclick="copybanAdd('#a4')" class="btn btn-dark">Copy Address</button>
         </div>
         </div>
       <br>
@@ -517,27 +288,21 @@
         <br />
       </div>
 
-      <div class="Previous Donations">
+      <div class="text-center">
         <h4>Previous Winners</h4>
         <div class="projectLarge">
   <div class="winners">
-    <p>ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry</p>
+    <p>ban_3acd3zmisj5nzxn673upfecp6hbbr9snwhomyixoja17mswsju3h9rja3df3</p>
   </div>
-  <div class="winners">
-    <p>ban_3g535xyeuegynfmzc4jxksqy959pcb73ykby3h1b8w97eotomsejdjtperry</p>
-</div>
   </div>
-        <br />
+        <br>
       </div>
        
-        <a href="#pagetop">Back to top</a>
         
-        <p>
-          Still feeling the pressure, not sure who to choose? Below are 4 numbers, each one leads to an 'unknown' charity ( for desktop users it's the charity at the top of the screen)
-        </p>
-        <a href="#c4">1</a> . <a href="#c2">2</a> . <a href="#c1">3</a> . <a href="#c3">4</a>
+        <p class="text-center">
+        <a href="#pagetop">Back to top</a></p>
       <hr>
-      <p class="mobileFooter">
+      <p class="mobileFooter text-center">
       <img src="https://cdn.glitch.global/d79718ab-d262-4738-8bb7-2e6901f4f041/banano-icon.png?v=1646162540776" alt="bananoLogo"></img>
     <span class="text">An initiative by</span>
       <img src="https://cdn.glitch.global/d79718ab-d262-4738-8bb7-2e6901f4f041/banano-icon.png?v=1646162540776" alt="bananoLogo"></img>
@@ -546,11 +311,10 @@
   
 </p>
 
-<p class="desktopFooter">
+<p class="desktopFooter text-center">
       <img src="https://cdn.glitch.global/d79718ab-d262-4738-8bb7-2e6901f4f041/banano-icon.png?v=1646162540776" alt="bananoLogo"></img>
     <span class="text">An initiative by thearistotle and PerryPal</span>
       <img src="https://cdn.glitch.global/d79718ab-d262-4738-8bb7-2e6901f4f041/banano-icon.png?v=1646162540776" alt="bananoLogo"></img>
 </p>
-    </div>
   </body>
 </html>

@@ -61,7 +61,7 @@ hr {
 }
 
 .project {
-  height: 150px;
+  height: 92%;
   border-radius: 10px;
   padding: 9px;
   background-color: #fbdd11;
@@ -78,8 +78,16 @@ hr {
   color: black;
 }
 
+.project > h5 > a:link {
+  color: black;
+}
+
+.project > h5 > a:visited {
+  color: black;
+}
+
 .img1 {
-  width: 50rem;
+  width: 38rem;
 }
 
 .img2 {

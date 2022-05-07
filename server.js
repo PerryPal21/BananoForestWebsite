@@ -34,7 +34,7 @@ const qr3 = config.qr3
 const qr4 = config.qr4
 
 fastify.get("/", async function (request, reply) {
-  const addressAPI = await fetch("https://beta-bananoforest.glitch.me/api");
+  const addressAPI = await fetch("https://bananoforest.com/api");
   const body = await addressAPI.json();
 
   var params = {

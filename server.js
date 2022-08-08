@@ -97,7 +97,7 @@ fastify.get("/api", async function (request, reply) {
     }});
 });
 
-fastify.listen(3007, "0.0.0.0", function (err, address) {
+fastify.listen(3000, "0.0.0.0", function (err, address) {
   if (err) {
     fastify.log.error(err);
     process.exit(1);
@@ -105,3 +105,4 @@ fastify.listen(3007, "0.0.0.0", function (err, address) {
   console.log(`Your app is listening on ${address}`);
   fastify.log.info(`server listening on ${address}`);
 });
+

@@ -38,12 +38,12 @@ fastify.get("/", async function (request, reply) {
   const body = await addressAPI.json();
 
   var params = {
-    add1: body.add1,
-    add2: body.add2,
-    add3: body.add3,
-    add4: body.add4,
+    add1: body.balance.add1,
+    add2: body.balance.add2,
+    add3: body.balance.add3,
+    add4: body.balance.add4,
   };
-  reply.view("/src/pages/index.hbs");
+  reply.view("/src/pages/index.hbs", params);
 });
 
 fastify.get("/raffle", function (request, reply) {
@@ -63,34 +63,41 @@ fastify.get("/faq", function (request, reply) {
 
 fastify.get("/api", async function (request, reply) {
   const resAddress1 = await fetch(
-    "https://api.creeper.banano.cc/v2/accounts/" + address1
+    "https://api.bananode.eu/v2/accounts/" + address1
   );
   const body1 = await resAddress1.json();
 
   const resAddress2 = await fetch(
-    "https://api.creeper.banano.cc/v2/accounts/" + address2
+    "https://api.bananode.eu/v2/accounts/"  + address2
   );
   const body2 = await resAddress2.json();
 
   const resAddress3 = await fetch(
-    "https://api.creeper.banano.cc/v2/accounts/" + address3
+    "https://api.bananode.eu/v2/accounts/" + address3
   );
   const body3 = await resAddress3.json();
 
   const resAddress4 = await fetch(
-    "https://api.creeper.banano.cc/v2/accounts/" + address4
+    "https://api.bananode.eu/v2/accounts/" + address4
   );
   const body4 = await resAddress4.json();
 
   reply.send({
+    balance: {
     add1: math.evaluate(body1.account.balance * 10 ** -29),
     add2: math.evaluate(body2.account.balance * 10 ** -29),
     add3: math.evaluate(body3.account.balance * 10 ** -29),
     add4: math.evaluate(body4.account.balance * 10 ** -29),
-  });
+  },
+    pending: {
+	    add1: math.evaluate(body1.account.pending * 10 ** -29),
+		    add2: math.evaluate(body2.account.pending * 10 ** -29),
+		    add3: math.evaluate(body3.account.pending * 10 ** -29),
+		    add4: math.evaluate(body4.account.pending * 10 ** -29)
+    }});
 });
 
-fastify.listen(process.env.PORT, "0.0.0.0", function (err, address) {
+fastify.listen(3007, "0.0.0.0", function (err, address) {
   if (err) {
     fastify.log.error(err);
     process.exit(1);

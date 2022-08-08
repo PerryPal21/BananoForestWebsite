@@ -42,6 +42,7 @@ fastify.get("/", async function (request, reply) {
     add2: body.balance.add2,
     add3: body.balance.add3,
     add4: body.balance.add4,
+    date: process.env["date"]
   };
   reply.view("/src/pages/index.hbs", params);
 });
@@ -52,6 +53,7 @@ fastify.get("/raffle", function (request, reply) {
     addressOrg2: { address: address2, qr: qr2 },
     addressOrg3: { address: address3, qr: qr3 },
     addressOrg4: { address: address4, qr: qr4 },
+    date: process.env["date"]
   };
   reply.view("/src/pages/raffle.hbs", params);
 });

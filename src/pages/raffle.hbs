@@ -123,13 +123,14 @@
 
     
       <div class="instructions">
+        
         <h4>How it works</h4>
         
        <p>
         Each wallet represents an organization. Each and every donation gets you a raffle ticket (nothing else is needed). Once a week, the charity that has the most money recieved is the winner. All of the 
         funds from these donation wallets are moved to a central wallet. </p> <p> %20 of the ban in this central wallet goes towards the <a href="https://faucet.bananoforest.com/">faucet</a>, %10 is used as the raffle ticket grand prize, and the remaining %70 is donated to the chosen organization through The Giving Block.</p>
         
-        </p>
+        <p>
         
         
         
@@ -148,6 +149,34 @@
         <p id="a3">{{addressOrg3.address}}</p>
         <p id="a4">{{addressOrg4.address}}</p>
       </div>
+<h2 style="text-align: center;">
+  <p id="countdown"></p></h2>
+        <script>
+    // The data/time we want to countdown to
+    var countDownDate = new Date("{{date}}").getTime();
+
+    // Run myfunc every second
+    var myfunc = setInterval(function() {
+
+    var now = new Date().getTime();
+    var timeleft = countDownDate - now;
+        
+    // Calculating the days, hours, minutes and seconds left
+    var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+        
+    // Result is output to the specific element
+    document.getElementById("countdown").innerHTML = "Next Roll - " + days + "d " + hours + "h " + minutes + "m " + seconds + "s "
+        
+    // Display the message when countdown is over
+    if (timeleft < 0) {
+        clearInterval(myfunc);
+        document.getElementById("countdown").innerHTML = "Stay Tuned..."
+    }
+    }, 1000);
+    </script>
       <div class="c1" id="c1">
           </div>
       <div class="project">
@@ -299,16 +328,6 @@
           <li>20% -> To be added to the Banano Forest faucet</li>
         </ul>
         <br />
-      </div>
-
-      <div class="text-center">
-        <h4>Previous Winners</h4>
-        <div class="projectLarge">
-  <div class="winners">
-    <p>ban_3acd3zmisj5nzxn673upfecp6hbbr9snwhomyixoja17mswsju3h9rja3df3</p>
-  </div>
-  </div>
-        <br>
       </div>
        
         

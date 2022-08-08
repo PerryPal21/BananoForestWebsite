@@ -107,11 +107,11 @@ drawChart();
 	
         <hr>
         <h5><a href="/raffle">🎟️ Enter the Raffle!</a></h5>
-        <a href="/raffle"><p>And earn some Banano while saving the forests</p></a>
+        <a href="/raffle"><p>And earn some Banano while saving wildlife</p></a>
         <strong><p id="countdown"></p></strong>
         <script>
     // The data/time we want to countdown to
-    var countDownDate = new Date("Aug 13, 2022 13:00:00").getTime();
+    var countDownDate = new Date("{{date}}").getTime();
 
     // Run myfunc every second
     var myfunc = setInterval(function() {
@@ -183,14 +183,6 @@ drawChart();
     <h4 class="text-center"><strong>Community Stats</strong></h4>
 <div id="piechart" style="width: 100%; height: 400px;"></div>
 
-<br>
-  </div>
-
-  <div class="info px-2" id="benefactors">
-    <h4><strong>Our Patrons</strong></h4>
-<p>
- We would like to have a live feed of donations here (WIP)
-  </p>
 <br>
   </div>
 <hr>

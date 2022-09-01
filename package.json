@@ -8,14 +8,16 @@
   },
   "dependencies": {
     "@bananocoin/bananojs": "^2.5.3",
+    "dotenv": "^16.0.1",
     "fastify": "^3.27.2",
     "fastify-formbody": "^5.2.0",
     "fastify-static": "^4.5.0",
     "handlebars": "^4.7.7",
     "mathjs": "^10.2.0",
-    "node-fetch": "^2.0.0",
+    "node-fetch": "^2.6.7",
     "package.json": "^2.0.1",
-    "point-of-view": "^5.1.0"
+    "point-of-view": "^5.1.0",
+    "stormdb": "^0.6.0"
   },
   "engines": {
     "node": "14.x"

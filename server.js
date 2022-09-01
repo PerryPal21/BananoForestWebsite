@@ -1,6 +1,11 @@
 const path = require("path");
 const fetch = require("node-fetch");
 const math = require("mathjs");
+const StormDB = require('stormdb')
+const engine = new StormDB.localFileEngine("/home/perry/bananoforest/bfBot/lastroll.json");
+const db = new StormDB(engine);
+console.log(db.get("lastroll").value())
+require('dotenv').config()
 const config = require("./config.json");
 
 const fastify = require("fastify")({
@@ -42,7 +47,7 @@ fastify.get("/", async function (request, reply) {
     add2: body.balance.add2,
     add3: body.balance.add3,
     add4: body.balance.add4,
-    date: process.env["date"]
+    date: db.get("lastroll").value()
   };
   reply.view("/src/pages/index.hbs", params);
 });
@@ -53,7 +58,7 @@ fastify.get("/raffle", function (request, reply) {
     addressOrg2: { address: address2, qr: qr2 },
     addressOrg3: { address: address3, qr: qr3 },
     addressOrg4: { address: address4, qr: qr4 },
-    date: process.env["date"]
+    date: process.env.date
   };
   reply.view("/src/pages/raffle.hbs", params);
 });
@@ -99,7 +104,7 @@ fastify.get("/api", async function (request, reply) {
     }});
 });
 
-fastify.listen(3000, "0.0.0.0", function (err, address) {
+fastify.listen(3002, "0.0.0.0", function (err, address) {
   if (err) {
     fastify.log.error(err);
     process.exit(1);

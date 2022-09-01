@@ -153,9 +153,9 @@
   <p id="countdown"></p></h2>
         <script>
     // The data/time we want to countdown to
-    var countDownDate = new Date("{{date}}").getTime();
-
-    // Run myfunc every second
+		dt=new Date(({{date}} + 1209600) * 1000).toLocaleString();
+    var countDownDate = new Date(dt).getTime();
+		// Run myfunc every second
     var myfunc = setInterval(function() {
 
     var now = new Date().getTime();
